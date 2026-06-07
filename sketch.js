@@ -1018,23 +1018,24 @@ function drawLobby(p) {
   _updateDrawBloodDrops(p);
 
   p.textAlign(p.CENTER, p.CENTER);
-  p.textFont('Nunito');
+  p.textAlign(p.CENTER, p.CENTER);
+p.textFont('shlop');  // ← Nunito에서 shlop으로 변경
 
-  const cx = CANVAS_W / 2;
+const cx = CANVAS_W / 2;
 
-  // ── 제목 영역
-  p.textStyle(p.BOLD);
-  p.textSize(60);
-  for (let i = 4; i >= 1; i--) {
-    p.fill(34, 200, 60, 18 - i * 3);
-    p.textFont('shlop');
+// ── 제목 영역
 p.textStyle(p.BOLD);
 p.textSize(60);
 for (let i = 4; i >= 1; i--) {
   p.fill(34, 200, 60, 18 - i * 3);
-  p.text('ZOMBIE SLIDE DUO', cx, 119 + i);
+  p.text('ZOMBIE SLIDE DUO', cx, 119 + i);  // ← 한글에서 영어로 변경
 }
 p.fill(10, 40, 12);
+p.text('ZOMBIE SLIDE DUO', cx + 2, 121);
+p.fill('#55CC60');
+p.text('ZOMBIE SLIDE DUO', cx, 119);
+p.textStyle(p.NORMAL);
+p.textFont('Nunito');  // ← 이후엔 다시 Nunito로
 p.text('ZOMBIE SLIDE DUO', cx + 2, 121);
 p.fill('#55CC60');
 p.text('ZOMBIE SLIDE DUO', cx, 119);
