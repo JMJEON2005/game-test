@@ -1,1 +1,1 @@
-# game-test
+zombie-territory-game
